@@ -1,0 +1,17 @@
+---
+# tasks file for unowned_files
+- name: find files
+  find:
+    paths: "{{ unowned_files_directories }}"
+  register: unowned_files_find_files
+
+- name: delete unowned files
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  when:
+    - item.pw_name | length == 0
+  with_items:
+    - "{{ unowned_files_find_files.files }}"
+  loop_control:
+    label: "{{ item.path }}"

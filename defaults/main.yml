@@ -1,0 +1,6 @@
+---
+# defaults file for unowned_files
+
+# A list of paths to search
+unowned_files_directories:
+  - /tmp
