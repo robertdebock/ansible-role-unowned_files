@@ -2,7 +2,7 @@ unowned_files
 =========
 
 <img src="https://docs.ansible.com/ansible-tower/3.2.4/html_ja/installandreference/_static/images/logo_invert.png" width="10%" height="10%" alt="Ansible logo" align="right"/>
-<a href="https://travis-ci.org/robertdebock/ansible-role-unowned_files"> <img src="https://travis-ci.org/robertdebock/ansible-role-unowned_files.svg?branch=master" alt="Build status"/></a> <img src="https://img.shields.io/ansible/role/d/"/> <img src="https://img.shields.io/ansible/quality/"/>
+<a href="https://travis-ci.org/robertdebock/ansible-role-unowned_files"> <img src="https://travis-ci.org/robertdebock/ansible-role-unowned_files.svg?branch=master" alt="Build status"/></a> <img src="https://img.shields.io/ansible/role/d/45318"/> <img src="https://img.shields.io/ansible/quality/45318"/>
 
 Install and configure unowned_files on your system.
 
