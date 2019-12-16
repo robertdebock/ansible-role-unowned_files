@@ -12,7 +12,7 @@
   when:
     - item.pw_name | length == 0 or
       item.gr_name | length == 0
-    - unowned_files_policy == "delete"
+    - unowned_files_delete | bool
   with_items:
     - "{{ unowned_files_find_files.files }}"
   loop_control:
@@ -24,7 +24,7 @@
     owner: "{{ unowned_files_default_owner }}"
   when:
     - item.pw_name | length == 0
-    - unowned_files_policy == "own"
+    - not unowned_files_delete | bool
   with_items:
     - "{{ unowned_files_find_files.files }}"
   loop_control:
@@ -36,7 +36,7 @@
     owner: "{{ unowned_files_default_group }}"
   when:
     - item.gr_name | length == 0
-    - unowned_files_policy == "own"
+    - not unowned_files_delete | bool
   with_items:
     - "{{ unowned_files_find_files.files }}"
   loop_control:
