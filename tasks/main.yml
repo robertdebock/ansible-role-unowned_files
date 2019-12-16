@@ -10,7 +10,33 @@
     path: "{{ item.path }}"
     state: absent
   when:
+    - item.pw_name | length == 0 or
+      item.gr_name | length == 0
+    - unowned_files_policy == "delete"
+  with_items:
+    - "{{ unowned_files_find_files.files }}"
+  loop_control:
+    label: "{{ item.path }}"
+
+- name: set owner to unowned files
+  file:
+    path: "{{ item.path }}"
+    owner: "{{ unowned_files_default_owner }}"
+  when:
     - item.pw_name | length == 0
+    - unowned_files_policy == "own"
+  with_items:
+    - "{{ unowned_files_find_files.files }}"
+  loop_control:
+    label: "{{ item.path }}"
+
+- name: set group to unowned files
+  file:
+    path: "{{ item.path }}"
+    owner: "{{ unowned_files_default_group }}"
+  when:
+    - item.gr_name | length == 0
+    - unowned_files_policy == "own"
   with_items:
     - "{{ unowned_files_find_files.files }}"
   loop_control:

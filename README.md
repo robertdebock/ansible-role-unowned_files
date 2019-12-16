@@ -44,6 +44,18 @@ These variables are set in `defaults/main.yml`:
 ---
 # defaults file for unowned_files
 
+# What to do with files or directories that have no owner. Either `delete` or
+# `own` to set an owner and group.
+unowned_files_policy: own
+
+# If files have no owner, but do have a group, change the owner to this
+# variable.
+unowned_files_default_owner: nodody
+
+# If files have no group, but do have an owner, change the group to this
+# variable.
+unowned_files_default_group: nodody
+
 # A list of paths to search
 unowned_files_directories:
   - /tmp
