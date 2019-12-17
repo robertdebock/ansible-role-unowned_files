@@ -33,7 +33,7 @@
 - name: set group to unowned files
   file:
     path: "{{ item.path }}"
-    owner: "{{ unowned_files_default_group }}"
+    group: "{{ unowned_files_default_group }}"
   when:
     - item.gr_name | length == 0
     - not unowned_files_delete | bool
