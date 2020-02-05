@@ -13,8 +13,7 @@
     - item.pw_name | length == 0 or
       item.gr_name | length == 0
     - unowned_files_delete | bool
-  with_items:
-    - "{{ unowned_files_find_files.files }}"
+  loop: "{{ unowned_files_find_files.files }}"
   loop_control:
     label: "{{ item.path }}"
 
@@ -25,8 +24,7 @@
   when:
     - item.pw_name | length == 0
     - not unowned_files_delete | bool
-  with_items:
-    - "{{ unowned_files_find_files.files }}"
+  loop: "{{ unowned_files_find_files.files }}"
   loop_control:
     label: "{{ item.path }}"
 
@@ -37,7 +35,6 @@
   when:
     - item.gr_name | length == 0
     - not unowned_files_delete | bool
-  with_items:
-    - "{{ unowned_files_find_files.files }}"
+  loop: "{{ unowned_files_find_files.files }}"
   loop_control:
     label: "{{ item.path }}"
