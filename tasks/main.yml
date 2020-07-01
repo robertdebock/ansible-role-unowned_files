@@ -1,5 +1,8 @@
 ---
 # tasks file for unowned_files
+- name: include assert.yml
+  include_tasks: assert.yml
+
 - name: find files
   find:
     paths: "{{ unowned_files_directories }}"

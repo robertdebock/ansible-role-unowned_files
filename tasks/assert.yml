@@ -1,0 +1,32 @@
+---
+- name: test if unowned_files_delete is set correctly
+  assert:
+    that:
+      - unowned_files_delete is defined
+      - unowned_files_delete | type_debug == "bool"
+
+- name: test if unowned_files_default_owner is set correctly
+  assert:
+    that:
+      - unowned_files_default_owner is defined
+      - unowned_files_default_owner | length > 0
+
+- name: test if unowned_files_default_group is set correctly
+  assert:
+    that:
+      - unowned_files_default_group is defined
+      - unowned_files_default_group | length > 0
+
+- name: test if unowned_files_directories is set correctly
+  assert:
+    that:
+      - unowned_files_directories is defined
+      - unowned_files_directories | length > 0
+      - unowned_files_directories is iterable
+
+- name: test if item in unowned_files_directories is set correctly
+  assert:
+    that:
+      - item is defined
+      - item | length > 0
+  loop: "{{ unowned_files_directories }}"
