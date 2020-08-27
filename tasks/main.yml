@@ -24,6 +24,7 @@
   file:
     path: "{{ item.path }}"
     owner: "{{ unowned_files_default_owner }}"
+    mode: "0644"
   when:
     - item.pw_name | length == 0
     - not unowned_files_delete | bool
@@ -35,6 +36,7 @@
   file:
     path: "{{ item.path }}"
     group: "{{ unowned_files_default_group }}"
+    mode: "0644"
   when:
     - item.gr_name | length == 0
     - not unowned_files_delete | bool
