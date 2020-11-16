@@ -10,21 +10,18 @@
   assert:
     that:
       - unowned_files_default_owner is defined
-      - unowned_files_default_owner | length > 0
     quiet: yes
 
 - name: test if unowned_files_default_group is set correctly
   assert:
     that:
       - unowned_files_default_group is defined
-      - unowned_files_default_group | length > 0
     quiet: yes
 
 - name: test if unowned_files_directories is set correctly
   assert:
     that:
       - unowned_files_directories is defined
-      - unowned_files_directories | length > 0
       - unowned_files_directories is iterable
     quiet: yes
 
@@ -32,6 +29,5 @@
   assert:
     that:
       - item is defined
-      - item | length > 0
     quiet: yes
   loop: "{{ unowned_files_directories }}"
