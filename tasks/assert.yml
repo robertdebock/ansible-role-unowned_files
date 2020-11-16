@@ -3,7 +3,7 @@
   assert:
     that:
       - unowned_files_delete is defined
-      - unowned_files_delete | type_debug == "bool"
+      - unowned_files_delete is boolean
     quiet: yes
 
 - name: test if unowned_files_default_owner is set correctly
