@@ -1,4 +1,5 @@
 ---
+
 - name: test if unowned_files_delete is set correctly
   assert:
     that:
