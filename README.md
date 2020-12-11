@@ -2,9 +2,9 @@
 
 Install and configure unowned_files on your system.
 
-|Travis|GitHub|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-unowned_files.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-unowned_files)|[![github](https://github.com/robertdebock/ansible-role-unowned_files/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-unowned_files/actions)|[![quality](https://img.shields.io/ansible/quality/45318)](https://galaxy.ansible.com/robertdebock/unowned_files)|[![downloads](https://img.shields.io/ansible/role/d/45318)](https://galaxy.ansible.com/robertdebock/unowned_files)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-unowned_files.svg)](https://github.com/robertdebock/ansible-role-unowned_files/releases/)|
+|Travis|GitHub|GitLab|Quality|Downloads|Version|
+|------|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-unowned_files.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-unowned_files)|[![github](https://github.com/robertdebock/ansible-role-unowned_files/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-unowned_files/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-unowned_files/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-unowned_files)|[![quality](https://img.shields.io/ansible/quality/45318)](https://galaxy.ansible.com/robertdebock/unowned_files)|[![downloads](https://img.shields.io/ansible/role/d/45318)](https://galaxy.ansible.com/robertdebock/unowned_files)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-unowned_files.svg)](https://github.com/robertdebock/ansible-role-unowned_files/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -62,10 +62,11 @@ unowned_files_directories:
 
 ## [Requirements](#requirements)
 
-- Access to a repository containing packages, likely on the internet.
-- A recent version of Ansible. (Tests run on the current, previous and next release of Ansible.)
+- pip packages listed in [requirements.txt](https://github.com/robertdebock/ansible-role-unowned_files/blob/master/requirements.txt).
 
 ## [Status of requirements](#status-of-requirements)
+
+The following roles are used to prepare a system. You may choose to prepare your system in another way, I have tested these roles as well.
 
 | Requirement | Travis | GitHub |
 |-------------|--------|--------|
