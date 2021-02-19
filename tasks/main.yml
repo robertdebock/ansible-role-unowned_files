@@ -7,12 +7,12 @@
   delegate_to: localhost
 
 - name: find files
-  find:
+  ansible.builtin.find:
     paths: "{{ unowned_files_directories }}"
   register: unowned_files_find_files
 
 - name: delete unowned files
-  file:
+  ansible.builtin.file:
     path: "{{ item.path }}"
     state: absent
   when:
