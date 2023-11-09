@@ -2,9 +2,9 @@
 
 Install and configure unowned_files on your system.
 
-|GitHub|GitLab|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-unowned_files/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-unowned_files/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-unowned_files/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-unowned_files)|[![quality](https://img.shields.io/ansible/quality/45318)](https://galaxy.ansible.com/robertdebock/unowned_files)|[![downloads](https://img.shields.io/ansible/role/d/45318)](https://galaxy.ansible.com/robertdebock/unowned_files)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-unowned_files.svg)](https://github.com/robertdebock/ansible-role-unowned_files/releases/)|
+|GitHub|GitLab|Downloads|Version|
+|------|------|---------|-------|
+|[![github](https://github.com/robertdebock/ansible-role-unowned_files/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-unowned_files/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-unowned_files/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-unowned_files)|[![downloads](https://img.shields.io/ansible/role/d/24616)](https://galaxy.ansible.com/robertdebock/unowned_files)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-unowned_files.svg)](https://github.com/robertdebock/ansible-role-unowned_files/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -102,7 +102,7 @@ The minimum version of Ansible required is 2.12, tests have been done to:
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-unowned_files/issues)
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-unowned_files/issues).
 
 ## [License](#license)
 
