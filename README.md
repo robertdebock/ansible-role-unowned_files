@@ -1,4 +1,4 @@
-# Ansible role [unowned_files](#unowned_files)
+# [Ansible role unowned_files](#unowned_files)
 
 Install and configure unowned_files on your system.
 
