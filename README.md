@@ -14,8 +14,8 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 ---
 - name: Converge
   hosts: all
-  become: yes
-  gather_facts: yes
+  become: true
+  gather_facts: true
 
   roles:
     - role: robertdebock.unowned_files
@@ -27,8 +27,8 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 ---
 - name: Prepare
   hosts: all
-  become: yes
-  gather_facts: no
+  become: true
+  gather_facts: false
 
   roles:
     - role: robertdebock.bootstrap
@@ -48,7 +48,7 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 # files that have either no owner or group. `no` will change the ownership of
 # files to the user and group set with `unowned_files_default_owner` and
 # `unowned_files_default_group`.
-unowned_files_delete: no
+unowned_files_delete: false
 
 # If files have no owner, but do have a group, change the owner to this
 # variable.
