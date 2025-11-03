@@ -5,4 +5,4 @@
 repository:
   description: Install and configure unowned_files on your system.
   homepage: https://robertdebock.nl/
-  topics: unownedfiles, security, ansible, molecule, tox, playbook
+  topics: unownedfiles, security, ansible, molecule, playbook
